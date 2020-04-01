@@ -1,0 +1,159 @@
+/*=============================================================
+						Reset CSS
+=============================================================*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+/*=============================================================
+						Fonts
+=============================================================*/
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/roboto-bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/roboto-bold/Roboto-Bold.woff') format('woff'), url('../fonts/roboto-bold/Roboto-Bold.ttf')  format('truetype'), url('../fonts/roboto-bold/Roboto-Bold.svg#Roboto-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/roboto-regular/Roboto-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/roboto-regular/Roboto-Regular.woff') format('woff'), url('../fonts/roboto-regular/Roboto-Regular.ttf')  format('truetype'), url('../fonts/roboto-regular/Roboto-Regular.svg#Roboto-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*=============================================================
+						General CSS
+=============================================================*/
+*{box-sizing: border-box;}
+body{background-color: #fff; overflow: hidden; position: relative; font-family: 'Roboto-Regular';}
+ul,li{padding: 0; margin:0;}
+
+/*=============================================================
+						Side Navigation
+=============================================================*/
+.side-nav{background-color: #241276; display: flex; width: 5%; height: 100vh; border-top-right-radius: 45px;  border-bottom-right-radius: 45px; align-items: center; justify-content: center; position: fixed; z-index: 2;}
+.side-logo {position: absolute; left: 0; right: 0; top: 9%; margin: auto; width: 40px;}
+.side-nav-ul {text-align: center;}
+.side-nav-ul > li:not(:last-child) {margin-bottom: 4rem;}
+.side-nav-ul > li > a {color: rgba(255,255,255,0.5); transition: 0.5s; -webkit-transition: 0.5s; line-height: 1; text-decoration: none;}
+.side-nav-ul > li.active > a{color: rgba(255,255,255,1);}
+.side-nav-ul > li > a:hover{color: rgba(255,255,255,1); text-decoration: none;}
+.side-nav-ul > li > a > i {font-size: 1.5rem;}
+
+/*=============================================================
+						Top Left Navigation
+=============================================================*/
+.top-left-nav-ul{display: flex; align-items: center; width: 100%; margin-top: 5%;}
+.top-left-nav-ul > li:not(:last-child){margin-right: 4%}
+.top-left-nav-ul > li > a {color: #fff; text-decoration: none; font-size: 20px;}
+.top-left-nav-ul > li > a::first-letter{text-transform: uppercase;}
+
+/*=============================================================
+						Main Banner
+=============================================================*/
+.main-banner{background-color: #5c41e4; width: 65vw; height: 100vh;border-top-right-radius: 45px; border-bottom-right-radius: 45px; display: flex; align-items: flex-start; padding-left: 10%; padding-top: 2%; padding-bottom: 4%; box-sizing: border-box; flex-direction: column; position: relative; transition: 0.5s; z-index: 1;}
+.reduced{width: 65vw; border-top-right-radius: 45px; border-bottom-right-radius: 45px;}
+.banner-area{display: flex; justify-content: space-between; flex-direction: column; height: 100%; padding-top: 5rem; position: relative;}
+lottie-player{position: absolute !important; height: auto !important; width: 40rem !important;z-index: -1;}
+.head-one{color: #fff; font-size: 4rem; font-weight: bold; margin-bottom: 0.75rem;}
+.banner-p{color: #fff; font-size: 2rem;}
+.btn{color: #fff; border:0; background:transparent; width: 230px; height: 75px; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 25px; font-size: 18px;}
+.btn-red{background-color: #fa4f57; color: #fff;}
+
+/*=============================================================
+						Side Bar Opner
+=============================================================*/
+.side-bar-opener{position: absolute; background-color:#fff; display: flex; top: 0; bottom: 0; right: 1rem; margin: auto; width: 5px; height: 40px; border-radius: 30px; cursor: pointer;}
+
+/*=============================================================
+						Side Bar Closer
+=============================================================*/
+.side-bar-closer{position: relative; width: 22px; height: 20px; cursor: pointer;}
+.side-bar-closer > span{display:flex; width: 5px; height: 5px; border-radius: 100%; position: absolute; transition: 0.5s; background-color: #222126;}
+.closer-first-child{top: 0; left: 0;}
+.closer-second-child{top: 0; right: 0;}
+.closer-third-child{bottom: 0; left: 0;}
+.closer-fourth-child{bottom: 0; right: 0;}
+
+/*=============================================================
+						Side Bar
+=============================================================*/
+.side-bar {position: absolute; width: 35vw; top: 0; right: 0; display: flex; flex-direction: column; padding: 2% 3% 0% 3%; box-sizing: border-box; height: 100%; z-index: 0;}
+.side-bar-nav{display: flex; align-items: center; justify-content: space-between; margin-bottom: 5rem;}
+.profile-img {width: 75px; height: 75px; position: relative; cursor: pointer;}
+.profile-img > img{width: 75px; height: 75px; border-radius: 100%;}
+.notification-alert{display: flex; width: 12px; height: 12px; background-color: #fe545d; border:3px solid #fff; border-radius: 100%; position: absolute; top: 0; right: 0;}
+.side-bar-nav-ul{display: flex; align-items: center; width: 100%; margin-left: 4%;}
+.side-bar-nav-ul > li:not(:last-child){margin-right: 4%;}
+.side-bar-nav-ul > li > a{color: #222126; text-decoration: none; font-size: 20px;}
+.side-bar-nav-ul > li > a:hover{color: #222126; text-decoration: none;}
+.head-two{color: #222126; font-family: 'Roboto-Bold'; font-size: 3.5rem; margin-bottom: 5rem; text-transform: capitalize;}
+.side-bar-form{margin-bottom: 2rem;}
+.input-search{display: flex; position: relative;}
+.search-box{width: 100%; background-color: #f3f3f3; border:0; border-radius: 25px; padding: 2rem; padding-left: 7rem; font-size: 30px;}
+.to-input-submit{position: absolute; z-index: 1; top:0; bottom: 0; left: 3rem; margin:auto; cursor: pointer; color: #1e1e20; font-size: 35px; height: 35px;}
+.input-submit{display: none;}
+::-webkit-input-placeholder {color: #adadad; font-size: 30px;}
+:-ms-input-placeholder {color: #adadad; font-size: 30px;}
+::placeholder {color: #adadad; font-size: 30px;}
+.search-list{display: flex; flex-direction: column; overflow-y: scroll;}
+.search-list > .box{width: 100%; border-radius: 25px; position: relative; padding: 2rem; display: flex; align-items: flex-end; justify-content: space-between; background-color: #01d0c8; box-sizing: border-box;}
+.search-list > .box:not(:last-child){margin-bottom: 2rem;}
+.search-list::-webkit-scrollbar {display: none;}
+.search-list {-ms-overflow-style: none;}
+.box-img{width: 100%; position: absolute;}
+.box-right {width: 100%; position: relative; max-width: 250px; height: 222px; z-index: 1; overflow: hidden;}
+.box-name {font-weight: bold; text-transform: capitalize; font-size: 20px;}
+.lap-img{margin-bottom: 5rem;}
+
+
+/*=============================================================
+						Animation
+=============================================================*/
+.custom-cubic-bezier {-webkit-animation: dive-animation 6s 2s infinite alternate; animation: dive-animation 6s 2s infinite alternate; -webkit-animation-timing-function: cubic-bezier(0.43, 0.05, 0.6, 0.99); animation-timing-function: cubic-bezier(0.43, 0.05, 0.6, 0.99);}
+@-webkit-keyframes dive-animation {
+    0% {-webkit-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px);}
+    50% {-webkit-transform: translateY(50px); -ms-transform: translateY(50px); transform: translateY(50px);}
+    100% {-webkit-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px);}
+}
+@keyframes dive-animation {
+    0% {-webkit-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px);}
+    50% {-webkit-transform: translateY(50px); -ms-transform: translateY(50px); transform: translateY(50px);}
+    100% {-webkit-transform: translateY(0px); -ms-transform: translateY(0px); transform: translateY(0px);}
+}
+
+/*=============================================================
+						Responsive
+=============================================================*/
+@media screen and (max-width: 1600px){
+	lottie-player {width: 30rem !important;}
+	.head-one {color: #fff;}
+	.banner-p {font-size: 1.5rem;}
+	.head-two {font-size: 3rem; margin-bottom: 2rem;}
+	.side-bar-nav {margin-bottom: 2rem;}
+	.search-box {padding: 1rem; padding-left: 5rem;}
+	.to-input-submit {left: 2rem;}
+	.box-right {height: 180px;}
+	.lap-img {margin-bottom: 3.5rem; max-width: 80px;}
+	.box-right {height: 180px;}
+	.box-img {width: 80%;}
+}
+
+@media screen and (max-width: 1024px){
+	lottie-player {width: 25rem !important; top: 25%;}
+	.head-two {font-size: 2rem;}
+	.to-input-submit{font-size: 25px; height: 25px;}
+	.search-list > .box{padding: 1rem;}
+	.box-right {height: 150px;}
+	.lap-img {margin-bottom: 3rem; max-width: 50px;}
+	.box-right {height: 150px; padding-left: 13%;}
+}
